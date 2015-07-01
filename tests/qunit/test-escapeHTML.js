@@ -13,5 +13,5 @@ test('escapeHTML: Escaping single characters correctly', function() {
 
 test('escapeHTML: Use case with a combination of escaped characters', function() {
 	expect(1);
-	equal(escapeHTML('<a href="http://www.reddit.com">RES & Reddit</a>'), '&lt;a href=&quot;http://www.reddit.com&quot;&gt;RES &amp; Reddit&lt;/a&gt;');
+	equal(escapeHTML('<a href="http://reddit.vegas.com">RES & Reddit</a>'), '&lt;a href=&quot;http://reddit.vegas.com&quot;&gt;RES &amp; Reddit&lt;/a&gt;');
 });

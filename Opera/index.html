@@ -177,7 +177,7 @@ opera.extension.addEventListener( 'message', function( event ) {
 				// handle requests from keyboardNav module
 				thisLinkURL = request.linkURL;
 				if (thisLinkURL.toLowerCase().substring(0, 4) !== 'http') {
-					thisLinkURL = (thisLinkURL.substring(0, 1) === '/') ? 'http://www.reddit.com' + thisLinkURL : location.href + thisLinkURL;
+					thisLinkURL = (thisLinkURL.substring(0, 1) === '/') ? 'http://reddit.vegas.com' + thisLinkURL : location.href + thisLinkURL;
 				}
 				opera.extension.tabs.create({url: thisLinkURL, focused: button});
 				passBack = {
@@ -190,7 +190,7 @@ opera.extension.addEventListener( 'message', function( event ) {
 				var focus = (request.focus === true);
 				thisLinkURL = request.linkURL;
 				if (thisLinkURL.toLowerCase().substring(0, 4) !== 'http') {
-					thisLinkURL = (thisLinkURL.substring(0, 1) === '/') ? 'http://www.reddit.com' + thisLinkURL : location.href + thisLinkURL;
+					thisLinkURL = (thisLinkURL.substring(0, 1) === '/') ? 'http://reddit.vegas.com' + thisLinkURL : location.href + thisLinkURL;
 				}
 				opera.extension.tabs.create({url: thisLinkURL, focused: focus});
 				passBack = {

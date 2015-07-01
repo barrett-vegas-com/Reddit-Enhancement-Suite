@@ -163,7 +163,7 @@
 				// handle requests from keyboardNav module
 				thisLinkURL = request.linkURL;
 				if (thisLinkURL.toLowerCase().substring(0, 4) !== 'http') {
-					thisLinkURL = (thisLinkURL.substring(0, 1) === '/') ? 'http://www.reddit.com' + thisLinkURL : location.href + thisLinkURL;
+					thisLinkURL = (thisLinkURL.substring(0, 1) === '/') ? 'http://reddit.vegas.com' + thisLinkURL : location.href + thisLinkURL;
 				}
 				// chrome.tabs.create({url: thisLinkURL});
 				// opens tab next to current, instead of at end of tab bar
@@ -175,7 +175,7 @@
 				var focus = (request.button === true) ? 'foreground' : 'background';
 				thisLinkURL = request.linkURL;
 				if (thisLinkURL.toLowerCase().substring(0, 4) !== 'http') {
-					thisLinkURL = (thisLinkURL.substring(0, 1) === '/') ? 'http://www.reddit.com' + thisLinkURL : location.href + thisLinkURL;
+					thisLinkURL = (thisLinkURL.substring(0, 1) === '/') ? 'http://reddit.vegas.com' + thisLinkURL : location.href + thisLinkURL;
 				}
 				linkTab = safari.application.activeBrowserWindow.openTab(focus);
 				linkTab.url = thisLinkURL;

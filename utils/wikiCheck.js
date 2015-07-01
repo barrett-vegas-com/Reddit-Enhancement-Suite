@@ -31,14 +31,14 @@ modules['wikiCheck'] = {
 	},
 	fetchPages: function() {
 		console.group('Fetching wiki pages');
-		$.getJSON('http://api.reddit.com/r/Enhancement/wiki/pages/', function(data){
+		$.getJSON('http://api.reddit.vegas.com/r/Enhancement/wiki/pages/', function(data){
 			console.log('Wiki page list fetched');
 			var wikiPages = data.data;
 			var fetchedPages = 0;
 			var optionsList = [];
 			wikiPages.forEach(function(wikiPage, i) {
 				setTimeout(function(page) {
-					$.getJSON('http://api.reddit.com/r/Enhancement/wiki/' + page, function(data) {
+					$.getJSON('http://api.reddit.vegas.com/r/Enhancement/wiki/' + page, function(data) {
 						var md = data.data.content_md;
 						var options = md.match(/######\S+/g) || [];
 						options.forEach(function(option) {

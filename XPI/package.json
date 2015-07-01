@@ -1,11 +1,11 @@
 {
-	"name": "reddit_res",
+	"name": "reddit_res_vdc",
 	"license": "GPL",
 	"author": "honestbleeps",
 	"version": "4.5.4",
-	"fullName": "Reddit Enhancement Suite",
+	"fullName": "Reddit Enhancement Suite - VDC",
 	"id": "jid1-xUfzOsOFlzSOXg",
-	"description": "A suite of tools to enhance Reddit",
+	"description": "A suite of tools to enhance Reddit on VDC",
 	"permissions": {
 		"private-browsing": true,
 		"unsafe-content-script": true

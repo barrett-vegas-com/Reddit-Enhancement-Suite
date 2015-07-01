@@ -168,7 +168,7 @@ chrome.runtime.onMessage.addListener(
 				// handle requests from keyboardNav module
 				thisLinkURL = request.linkURL;
 				if (thisLinkURL.toLowerCase().substring(0, 4) !== 'http') {
-					thisLinkURL = (thisLinkURL.substring(0, 1) === '/') ? 'http://www.reddit.com' + thisLinkURL : location.href + thisLinkURL;
+					thisLinkURL = (thisLinkURL.substring(0, 1) === '/') ? 'http://reddit.vegas.com' + thisLinkURL : location.href + thisLinkURL;
 				}
 				// Get the selected tab so we can get the index of it.  This allows us to open our new tab as the "next" tab.
 				newIndex = sender.tab.index + 1;
@@ -180,7 +180,7 @@ chrome.runtime.onMessage.addListener(
 				// handle requests from keyboardNav module
 				thisLinkURL = request.linkURL;
 				if (thisLinkURL.toLowerCase().substring(0, 4) !== 'http') {
-					thisLinkURL = (thisLinkURL.substring(0, 1) === '/') ? 'http://www.reddit.com' + thisLinkURL : location.href + thisLinkURL;
+					thisLinkURL = (thisLinkURL.substring(0, 1) === '/') ? 'http://reddit.vegas.com' + thisLinkURL : location.href + thisLinkURL;
 				}
 				// Get the selected tab so we can get the index of it.  This allows us to open our new tab as the "next" tab.
 				newIndex = sender.tab.index + 1;

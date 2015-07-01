@@ -143,7 +143,7 @@ function openTab(options) {
 }
 
 pageMod.PageMod({
-	include: ['*.reddit.com'],
+	include: ['*.reddit.vegas.com'],
 	contentScriptWhen: 'start',
 	contentScriptFile: [
 		self.data.url('vendor/jquery-1.11.3.min.js'),
@@ -297,7 +297,7 @@ pageMod.PageMod({
 					worker.postMessage({ requestType: 'readResource', data: fileData, transaction: request.transaction });
 					break;
 				case 'deleteCookie':
-					cookieManager.remove('.reddit.com', request.cname, '/', false);
+					cookieManager.remove('.reddit.vegas.com', request.cname, '/', false);
 					worker.postMessage({removedCookie: request.cname});
 					break;
 				case 'ajax':
@@ -376,7 +376,7 @@ pageMod.PageMod({
 					// handle requests from keyboardNav module
 					thisLinkURL = request.linkURL;
 					if (thisLinkURL.toLowerCase().substring(0, 4) !== 'http') {
-						thisLinkURL = (thisLinkURL.substring(0, 1) === '/') ? 'http://www.reddit.com' + thisLinkURL : location.href + thisLinkURL;
+						thisLinkURL = (thisLinkURL.substring(0, 1) === '/') ? 'http://reddit.vegas.com' + thisLinkURL : location.href + thisLinkURL;
 					}
 					// Get the selected tab so we can get the index of it.  This allows us to open our new tab as the "next" tab.
 					openTab({url: thisLinkURL, inBackground: inBackground, isPrivate: isPrivate });
@@ -388,7 +388,7 @@ pageMod.PageMod({
 
 					thisLinkURL = request.linkURL;
 					if (thisLinkURL.toLowerCase().substring(0, 4) !== 'http') {
-						thisLinkURL = (thisLinkURL.substring(0, 1) === '/') ? 'http://www.reddit.com' + thisLinkURL : location.href + thisLinkURL;
+						thisLinkURL = (thisLinkURL.substring(0, 1) === '/') ? 'http://reddit.vegas.com' + thisLinkURL : location.href + thisLinkURL;
 					}
 					// Get the selected tab so we can get the index of it.  This allows us to open our new tab as the "next" tab.
 					openTab({url: thisLinkURL, inBackground: inBackground, isPrivate: isPrivate });
